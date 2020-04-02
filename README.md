@@ -65,7 +65,9 @@ Implement the Adaboost algorithm and apply it to the Bayes classifier. Design a 
 Compute the classification accuracy of the boosted classifier on some data sets and compare it with those of the basic classifier on the vowels and iris data sets. 
 
 <b> (1) Is there any improvement in classification accuracy? Why/why not? </b>
+
 <b> (2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex? </b>
+
 <b> (3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting? </b>
 
 <h2>Assignment 6</h2>
@@ -73,11 +75,10 @@ Compute the classification accuracy of the boosted classifier on some data sets 
 Test the decision tree classifier on the vowels and iris data sets. Repeat but now by passing it as an argument to the BoostClassifier object. Answer questions 1-3 in assignment 5 for the decision tree.
 
 <b> (1) Is there any improvement in classification accuracy? Why/why not? </b>
+
 <b> (2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex? </b>
+
 <b> (3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting? </b>
 
 <h2>Assignment 7</h2>
-If you had to pick a classier, naive Bayes or a decision tree or
-the boosted versions of these, which one would you pick? Motivate from the following
-criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances,
-N, is large, or both.
+If you had to pick a classier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.
