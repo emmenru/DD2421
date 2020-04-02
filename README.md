@@ -5,7 +5,7 @@ Use the provided function, genBlobs(), that returns Gaussian distributed data po
 
 ![ass1](https://user-images.githubusercontent.com/1690217/78283799-a2dbbd80-751e-11ea-84b8-959f619d1187.png)
 
-<h2> Assignment 2 </h2>
+<h2> Assignment 2-3 </h2>
 Run testClassifier for the datasets and take note of the accuracies. Use plotBoundary
 to plot the decision boundary of the 2D iris dataset. 
 
