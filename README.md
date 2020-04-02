@@ -44,8 +44,10 @@ Trial: 80 Accuracy 62.3
 Trial: 90 Accuracy 70.8
 Final mean classification accuracy  64.7 with standard deviation 4.03
 ```
+![ass3](https://user-images.githubusercontent.com/1690217/78285843-01a23680-7521-11ea-8cfb-fd278f856866.png)
 
 <b>(1) When can a feature independence assumption be reasonable and when not?</b>
+As seen by accuracy measures presented above, the Naive Bayes classifier works well better for the iris dataset than for the vowels dataset. One can assume that vowel properties are correlated, i.e. that the classes are not completely independent.
 
 <b>(2) How does the decision boundary look for the Iris dataset? How could one improve
 the classification results for this scenario by changing classifier or, alternatively,
