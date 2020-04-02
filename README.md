@@ -22,6 +22,7 @@ Trial: 80 Accuracy 86.7
 Trial: 90 Accuracy 91.1
 Final mean classification accuracy  89 with standard deviation 4.16
 ```
+![ass2](https://user-images.githubusercontent.com/1690217/78284002-f948fc00-751e-11ea-8f07-01984d4c66a6.png)
 
 <b>(1) When can a feature independence assumption be reasonable and when not?</b>
 
