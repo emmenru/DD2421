@@ -46,15 +46,15 @@ Final mean classification accuracy  64.7 with standard deviation 4.03
 ```
 ![ass3](https://user-images.githubusercontent.com/1690217/78285843-01a23680-7521-11ea-8cfb-fd278f856866.png)
 
-<b>(1) When can a feature independence assumption be reasonable and when not?</b>
+**(1) When can a feature independence assumption be reasonable and when not?**
 
 Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. For example, the correlation between sepal.width and sepal.length and petal.width and petal.length for the iris dataset is -0.117 versus 0.96 (!). Similar conclusions can be drawn when looking at the diagonal of the covariance matrices for these comparisons. However, for the vowels dataset, columns are formants, and they are of course dependent if measured on the same speaker. 
 
 Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent).
 
-<b>(2) How does the decision boundary look for the Iris dataset? How could one improve
+**(2) How does the decision boundary look for the Iris dataset? How could one improve
 the classification results for this scenario by changing classifier or, alternatively,
-manipulating the data?</b>
+manipulating the data?**
 
 Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a radial boundary would perform better. One could also try transforming the data to see if the categories become more separable.
 
@@ -64,21 +64,21 @@ Implement the Adaboost algorithm and apply it to the Bayes classifier. Design a 
 
 Compute the classification accuracy of the boosted classifier on some data sets and compare it with those of the basic classifier on the vowels and iris data sets. 
 
-<b> (1) Is there any improvement in classification accuracy? Why/why not? </b>
+**(1) Is there any improvement in classification accuracy? Why/why not?**
 
-<b> (2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex? </b>
+**(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
-<b> (3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting? </b>
+**(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
 <h2>Assignment 6</h2>
 
 Test the decision tree classifier on the vowels and iris data sets. Repeat but now by passing it as an argument to the BoostClassifier object. Answer questions 1-3 in assignment 5 for the decision tree.
 
-<b> (1) Is there any improvement in classification accuracy? Why/why not? </b>
+**(1) Is there any improvement in classification accuracy? Why/why not?**
 
-<b> (2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex? </b>
+**(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
-<b> (3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting? </b>
+**(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
 <h2>Assignment 7</h2>
 If you had to pick a classier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.
