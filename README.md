@@ -71,6 +71,7 @@ Describe how and why boosting improves performance here...
 
 **(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
+![ass2](https://user-images.githubusercontent.com/1690217/78284002-f948fc00-751e-11ea-8f07-01984d4c66a6.png)
 ![ass5](https://user-images.githubusercontent.com/1690217/78816303-d496cd80-79d1-11ea-9ab3-eefbcdc14b48.png)
 
 Describe the difference of the decision boundary.
