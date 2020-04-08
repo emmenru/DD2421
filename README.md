@@ -60,15 +60,24 @@ Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a rad
 
 <h2>Assignment 4-5</h2>
 
-Implement the Adaboost algorithm and apply it to the Bayes classifier. Design a function that classifiees the instances in data by means of the aggregated boosted classifier according to Equation 15. 
+Implement the Adaboost algorithm and apply it to the Bayes classifier. Design a function that classifies the instances in data by means of the aggregated boosted classifier according to Equation 15. 
 
 Compute the classification accuracy of the boosted classifier on some data sets and compare it with those of the basic classifier on the vowels and iris data sets. 
 
 **(1) Is there any improvement in classification accuracy? Why/why not?**
+Yes the classification is improved for the iris data set. The original Bayes classifier obtained a final mean classification accuracy of 89 with standard deviation 4.16. The boosted classifier obtained a final mean classification accuracy of 94.7 with standard deviation 2.82. 
+
+Describe how and why boosting improves performance here... 
 
 **(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
+![ass5](https://user-images.githubusercontent.com/1690217/78816303-d496cd80-79d1-11ea-9ab3-eefbcdc14b48.png)
+
+Describe the difference of the decision boundary.
+
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
+
+Yes, but there might be a risk for overfitting. 
 
 <h2>Assignment 6</h2>
 
@@ -76,9 +85,15 @@ Test the decision tree classifier on the vowels and iris data sets. Repeat but n
 
 **(1) Is there any improvement in classification accuracy? Why/why not?**
 
+Final mean classification accuracy  92.4 with standard deviation 3.71 -> Final mean classification accuracy  94.6 with standard deviation 3.65
+
 **(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
+
+![ass6a](https://user-images.githubusercontent.com/1690217/78816872-9b129200-79d2-11ea-8aef-12d3dd019338.png)
+![ass6b](https://user-images.githubusercontent.com/1690217/78816876-9bab2880-79d2-11ea-9e28-76869483ded5.png)
+
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
 <h2>Assignment 7</h2>
-If you had to pick a classier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.
+If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.
