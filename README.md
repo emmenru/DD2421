@@ -204,8 +204,11 @@ It actually looks a bit more complex, yes.
 See answer for Assignment 5. 
 
 <h2>Assignment 7</h2>
-If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: 
-* outliers
+If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? 
+
+Motivate from the following criteria: 
+
+* outliers: 
 * irrelevant inputs (part of the feature space is irrelevant): 
 * predictive power: 
 * mixed types of data (binary, categorical or continuous features): 
