@@ -48,18 +48,13 @@ Final mean classification accuracy  64.7 with standard deviation 4.03
 
 **(1) When can a feature independence assumption be reasonable and when not?**
 
-Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. Naive Bayes is not reasonable when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0. 
-
-# "For example, the correlation between sepal.width and sepal.length and petal.width and petal.length for the iris dataset is -0.117 versus 0.96 (!)." 
-# "Similar conclusions can be drawn when looking at the diagonal of the covariance matrices for these comparisons. However, for the vowels dataset, columns are formants, and they are of course dependent if measured on the same speaker." 
-
-Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent).
+Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent). Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. Naive Bayes does not work well when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0. 
 
 **(2) How does the decision boundary look for the Iris dataset? How could one improve
 the classification results for this scenario by changing classifier or, alternatively,
 manipulating the data?**
 
-Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a radial boundary would perform better. One could also try transforming the data to see if the categories become more separable.
+Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a radial boundary would perform better. One could also try transforming the data to see if the categories become more separable. Or, one could use boosting, which implements weights that could adjust the importance of the points that are used to define the decision boundary.
 
 <h2>Assignment 4-5</h2>
 
@@ -100,7 +95,7 @@ Final mean classification accuracy  80.2 with standard deviation 3.52
 ```
 
 **(1) Is there any improvement in classification accuracy? Why/why not?**
-Yes the classification is improved for the both of the data sets. This is because the Adaboost algorithm takes weights into account, i.e. how important each classifier should be.  
+Yes the classification is improved for the both of the data sets. This is because the Adaboost algorithm takes weights into account, i.e. how important each classifier should be. Aggregated weak classifiers can thus perform as a strong classifier.
 
 * IRIS NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
 * IRIS NAIVE BAYES+ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
