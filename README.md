@@ -208,8 +208,15 @@ If you had to pick a classifier, naive Bayes or a decision tree or the boosted v
 
 Motivate from the following criteria: 
 
-* outliers: 
-* irrelevant inputs (part of the feature space is irrelevant): 
-* predictive power: 
-* mixed types of data (binary, categorical or continuous features): 
-* scalability (the dimension of the data, D, is large or the number of instances, N, is large, or both): 
+* Outliers: There is a risk that boosting will give a lot of importance to the outliers through high weights. Decision trees may also overfit the data.
+* Irrelevant inputs (part of the feature space is irrelevant): 
+* Predictive power: 
+* Mixed types of data (binary, categorical or continuous features): 
+* Scalability (the dimension of the data, D, is large or the number of instances, N, is large, or both): 
+
+In general, decision trees have high variance and low bias. They are relatively easy to compute and can handle irrelevant features as well as mixed data types. They are however prone to overfitting. 
+
+Bayes, on the other hand, have high bias and low variance. This means that they fit in cases where there is also a relatively...
+
+Boosting focuses on predicting errors, and might thus be affected by outliers. 
+
