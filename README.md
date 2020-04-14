@@ -64,8 +64,46 @@ Implement the Adaboost algorithm and apply it to the Bayes classifier. Design a 
 
 Compute the classification accuracy of the boosted classifier on some data sets and compare it with those of the basic classifier on the vowels and iris data sets. 
 
+```
+testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='iris',split=0.7)
+
+Trial: 0 Accuracy 95.6
+Trial: 10 Accuracy 100
+Trial: 20 Accuracy 93.3
+Trial: 30 Accuracy 91.1
+Trial: 40 Accuracy 97.8
+Trial: 50 Accuracy 93.3
+Trial: 60 Accuracy 93.3
+Trial: 70 Accuracy 97.8
+Trial: 80 Accuracy 95.6
+Trial: 90 Accuracy 93.3
+Final mean classification accuracy  94.7 with standard deviation 2.82
+```
+
+````
+testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='vowel',split=0.7)
+
+Trial: 0 Accuracy 76.6
+Trial: 10 Accuracy 86.4
+Trial: 20 Accuracy 83.1
+Trial: 30 Accuracy 80.5
+Trial: 40 Accuracy 72.7
+Trial: 50 Accuracy 76
+Trial: 60 Accuracy 81.8
+Trial: 70 Accuracy 82.5
+Trial: 80 Accuracy 79.9
+Trial: 90 Accuracy 83.1
+Final mean classification accuracy  80.2 with standard deviation 3.52
+```
+
 **(1) Is there any improvement in classification accuracy? Why/why not?**
-Yes the classification is improved for the iris data set. The original Bayes classifier obtained a final mean classification accuracy of 89 with standard deviation 4.16. The boosted classifier obtained a final mean classification accuracy of 94.7 with standard deviation 2.82. 
+Yes the classification is improved for the both of the data sets. This is because the Adaboost algorithm takes weights into account, i.e. how important each classifier should be.  
+
+IRIS NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
+IRIS NAIVE BAYES+ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
+
+VOWEL NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
+VOWEL NAIVE BAYES+ADABOOST: Final mean classification accuracy  80.2 with standard deviation 3.52
 
 Describe how and why boosting improves performance here... 
 
@@ -74,7 +112,7 @@ Describe how and why boosting improves performance here...
 ![ass2](https://user-images.githubusercontent.com/1690217/78284002-f948fc00-751e-11ea-8f07-01984d4c66a6.png)
 ![ass5](https://user-images.githubusercontent.com/1690217/78816303-d496cd80-79d1-11ea-9ab3-eefbcdc14b48.png)
 
-Describe the difference of the decision boundary.
+The decision boundary looks a bit more complex. In particular, it separates a certain area where there were errors in classification without boosting erroneously confused class 1 and 2. 
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
