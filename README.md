@@ -48,7 +48,7 @@ Final mean classification accuracy  64.7 with standard deviation 4.03
 
 **(1) When can a feature independence assumption be reasonable and when not?**
 
-Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent). Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. Naive Bayes does not work well when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0. 
+Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent). Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. Naive Bayes does not work well when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0 (e.g. if class that comes in testing data that has not been seen in training leads to zero probab of that particular class). 
 
 **(2) How does the decision boundary look for the Iris dataset? How could one improve
 the classification results for this scenario by changing classifier or, alternatively,
@@ -204,19 +204,15 @@ It actually looks a bit more complex, yes.
 See answer for Assignment 5. 
 
 <h2>Assignment 7</h2>
-If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? 
+If you had to pick a classifier, Naive Bayes (NB) or a Decision Tree (DT) or the boosted versions of these, which one would you pick? 
 
 Motivate from the following criteria: 
 
-* Outliers: There is a risk that boosting will give a lot of importance to the outliers through high weights. Decision trees may also overfit the data.
-* Irrelevant inputs (part of the feature space is irrelevant): 
-* Predictive power: 
-* Mixed types of data (binary, categorical or continuous features): 
-* Scalability (the dimension of the data, D, is large or the number of instances, N, is large, or both): 
+* Outliers: DTs. There is a risk that boosting will give a lot of importance to the outliers through high weights: outliers can be bad for boosting because boosting builds each new weighted model on previous errors (outliers will have larger residuals than non-outliers, so gradient boosting will focus a disproportionate amount of its attention on those points). NB is sensitive to outliers. DTs are rather robust to outliers (they are based on splitting points in the data, not extreme values). 
+* Irrelevant inputs (part of the feature space is irrelevant): For NB, you pick features that matter. For DTs, they tend to ignore irrelevant features. NV outperform decision trees when it comes to rare occurences (e.g. imagine predicting cancer in the general population, a DC will probably prune such important classes out of the model). AdaBoost training process selects only those features known to improve the predictive power of the model, reducing dimensionality and potentially improving execution time as irrelevant features do not need to be computed.
+* Predictive power: NB has high predictive power considering how simple it is to more complex models. Combine with boosting to get even better results. DTs can be pruned to improve predictive power. Boosting in general is a technique that is used to create stronger models.
+* Mixed types of data (binary, categorical or continuous features): DTs are known to handle a mix of different features. NB can also handle this, assuming Gaussian and categorical error distributions, but they are more known for continuous data. Boosting can probably improve performance. 
+* Scalability (the dimension of the data, D, is large or the number of instances, N, is large, or both): If your data set is small, NB can achieve reasonable performance. It works well for large data sets too. DT works better for lots of data (small variations in the data can result in a completely different tree since DTs have high variance). NB is not affected by large feature sets. DTs may be hard to interpret if they have a lot of features: more branches on a tree lead to a risk of over-fitting. DTs work best for small number of classes.
 
-In general, decision trees have high variance and low bias. They are relatively easy to compute and can handle irrelevant features as well as mixed data types. They are however prone to overfitting. 
-
-Bayes, on the other hand, have high bias and low variance. This means that they fit in cases where there is also a relatively...
-
-Boosting focuses on predicting errors, and might thus be affected by outliers. 
+In general, decision trees have high variance and low bias. Bayes, on the other hand, have high bias and low variance. Naive Bayes will only work if the decision boundary is linear, elliptic, or parabolic. Alternative methods are KNNs. Overfitted trees can be addressed through boosting methods. 
 
