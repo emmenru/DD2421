@@ -199,7 +199,7 @@ It actually looks a bit more complex, yes.
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
-See answer for Exercise 5. 
+See answer for Assignment 5. 
 
 <h2>Assignment 7</h2>
 If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: 
