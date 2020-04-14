@@ -99,14 +99,12 @@ Final mean classification accuracy  80.2 with standard deviation 3.52
 **(1) Is there any improvement in classification accuracy? Why/why not?**
 Yes the classification is improved for the both of the data sets. This is because the Adaboost algorithm takes weights into account, i.e. how important each classifier should be.  
 
-IRIS NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
+* IRIS NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
+* IRIS NAIVE BAYES+ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
 
-IRIS NAIVE BAYES+ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
 
-
-VOWEL NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
-
-VOWEL NAIVE BAYES+ADABOOST: Final mean classification accuracy  80.2 with standard deviation 3.52
+* VOWEL NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
+* VOWEL NAIVE BAYES+ADABOOST: Final mean classification accuracy  80.2 with standard deviation 3.52
 
 Describe how and why boosting improves performance here... 
 
@@ -115,7 +113,7 @@ Describe how and why boosting improves performance here...
 ![ass2](https://user-images.githubusercontent.com/1690217/78284002-f948fc00-751e-11ea-8f07-01984d4c66a6.png)
 ![ass5](https://user-images.githubusercontent.com/1690217/78816303-d496cd80-79d1-11ea-9ab3-eefbcdc14b48.png)
 
-The decision boundary looks a bit more complex. In particular, it separates a certain area where there were errors in classification without boosting erroneously confused class 1 and 2. 
+The decision boundary looks a bit more complex. In particular, it separates a certain area where there were errors in classification without boosting erroneously confused class 1 and 2. The boosting allows the model to focus more on these previously misclassified points.
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
@@ -123,11 +121,76 @@ Yes, but there might be a risk for overfitting.
 
 <h2>Assignment 6</h2>
 
-Test the decision tree classifier on the vowels and iris data sets. Repeat but now by passing it as an argument to the BoostClassifier object. Answer questions 1-3 in assignment 5 for the decision tree.
+Test the decision tree classifier on the vowels and iris data sets. Repeat but now by passing it as an argument to the BoostClassifier object. Answer questions 1-3 in assignment 5 for the decision tree. 
+
+```
+testClassifier(DecisionTreeClassifier(), dataset='iris', split=0.7)
+
+Trial: 0 Accuracy 95.6
+Trial: 10 Accuracy 100
+Trial: 20 Accuracy 91.1
+Trial: 30 Accuracy 91.1
+Trial: 40 Accuracy 93.3
+Trial: 50 Accuracy 91.1
+Trial: 60 Accuracy 88.9
+Trial: 70 Accuracy 88.9
+Trial: 80 Accuracy 93.3
+Trial: 90 Accuracy 88.9
+Final mean classification accuracy  92.4 with standard deviation 3.71
+```
+
+```
+testClassifier(BoostClassifier(DecisionTreeClassifier(), T=10), dataset='iris',split=0.7)
+
+Trial: 0 Accuracy 95.6
+Trial: 10 Accuracy 100
+Trial: 20 Accuracy 95.6
+Trial: 30 Accuracy 93.3
+Trial: 40 Accuracy 93.3
+Trial: 50 Accuracy 95.6
+Trial: 60 Accuracy 88.9
+Trial: 70 Accuracy 93.3
+Trial: 80 Accuracy 93.3
+Trial: 90 Accuracy 93.3
+Final mean classification accuracy  94.6 with standard deviation 3.65
+```
+
+
+```
+testClassifier(DecisionTreeClassifier(), dataset='vowel',split=0.7)
+
+Trial: 0 Accuracy 63.6
+Trial: 10 Accuracy 68.8
+Trial: 20 Accuracy 63.6
+Trial: 30 Accuracy 66.9
+Trial: 40 Accuracy 59.7
+Trial: 50 Accuracy 63
+Trial: 60 Accuracy 59.7
+Trial: 70 Accuracy 68.8
+Trial: 80 Accuracy 59.7
+Trial: 90 Accuracy 68.2
+Final mean classification accuracy  64.1 with standard deviation 4
+```
+
+```
+testClassifier(BoostClassifier(DecisionTreeClassifier(), T=10), dataset='vowel',split=0.7)
+
+Trial: 0 Accuracy 84.4
+Trial: 10 Accuracy 89.6
+Trial: 20 Accuracy 86.4
+Trial: 30 Accuracy 93.5
+Trial: 40 Accuracy 84.4
+Trial: 50 Accuracy 79.9
+Trial: 60 Accuracy 89
+Trial: 70 Accuracy 86.4
+Trial: 80 Accuracy 85.7
+Trial: 90 Accuracy 85.7
+Final mean classification accuracy  86.6 with standard deviation 2.97
+```
 
 **(1) Is there any improvement in classification accuracy? Why/why not?**
 
-Final mean classification accuracy  92.4 with standard deviation 3.71 -> Final mean classification accuracy  94.6 with standard deviation 3.65
+Yes there is an improvement for both datasets. However, the improvement is larger for the vowel dataset. 
 
 **(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
