@@ -100,9 +100,12 @@ Final mean classification accuracy  80.2 with standard deviation 3.52
 Yes the classification is improved for the both of the data sets. This is because the Adaboost algorithm takes weights into account, i.e. how important each classifier should be.  
 
 IRIS NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
+
 IRIS NAIVE BAYES+ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
 
+
 VOWEL NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
+
 VOWEL NAIVE BAYES+ADABOOST: Final mean classification accuracy  80.2 with standard deviation 3.52
 
 Describe how and why boosting improves performance here... 
