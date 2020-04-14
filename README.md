@@ -48,7 +48,10 @@ Final mean classification accuracy  64.7 with standard deviation 4.03
 
 **(1) When can a feature independence assumption be reasonable and when not?**
 
-Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. For example, the correlation between sepal.width and sepal.length and petal.width and petal.length for the iris dataset is -0.117 versus 0.96 (!). Similar conclusions can be drawn when looking at the diagonal of the covariance matrices for these comparisons. However, for the vowels dataset, columns are formants, and they are of course dependent if measured on the same speaker. 
+Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. Naive Bayes is not reasonable when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0. 
+
+<> For example, the correlation between sepal.width and sepal.length and petal.width and petal.length for the iris dataset is -0.117 versus 0.96 (!). 
+<> Similar conclusions can be drawn when looking at the diagonal of the covariance matrices for these comparisons. However, for the vowels dataset, columns are formants, and they are of course dependent if measured on the same speaker. 
 
 Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent).
 
@@ -117,7 +120,7 @@ The decision boundary looks a bit more complex. In particular, it separates a ce
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
-Yes, but there might be a risk for overfitting. 
+Yes. Boosting can be used to reduce bias and variance, but it can also result in overfitting. The idea is to turn a weak classifier into a strong one. 
 
 <h2>Assignment 6</h2>
 
@@ -197,8 +200,16 @@ Yes there is an improvement for both datasets. However, the improvement is large
 ![ass6a](https://user-images.githubusercontent.com/1690217/78816872-9b129200-79d2-11ea-8aef-12d3dd019338.png)
 ![ass6b](https://user-images.githubusercontent.com/1690217/78816876-9bab2880-79d2-11ea-9e28-76869483ded5.png)
 
+It actually looks a bit more complex, yes. 
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
+See answer for Exercise 5. 
+
 <h2>Assignment 7</h2>
-If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: outliers, irrelevant inputs: part of the feature space is irrelevant, predictive power, mixed types of data: binary, categorical or continuous features, etc., scalability: the dimension of the data, D, is large or the number of instances, N, is large, or both.
+If you had to pick a classifier, naive Bayes or a decision tree or the boosted versions of these, which one would you pick? Motivate from the following criteria: 
+* outliers
+* irrelevant inputs (part of the feature space is irrelevant): 
+* predictive power: 
+* mixed types of data (binary, categorical or continuous features): 
+* scalability (the dimension of the data, D, is large or the number of instances, N, is large, or both): 
