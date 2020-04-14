@@ -80,7 +80,7 @@ Trial: 90 Accuracy 93.3
 Final mean classification accuracy  94.7 with standard deviation 2.82
 ```
 
-````
+```
 testClassifier(BoostClassifier(BayesClassifier(), T=10), dataset='vowel',split=0.7)
 
 Trial: 0 Accuracy 76.6
