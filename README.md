@@ -50,7 +50,7 @@ Final mean classification accuracy  64.7 with standard deviation 4.03
 
 Naive Bayes classifier is good for moderate or large datasets, for example for medical diagnoses (where symptoms are independent) and classification of text documents or spam-emails (where words are independent). 
 
-Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. 
+Naive Bayes classifier works well when variables are "reasonably independent", i.e. they can be a bit correlated but should not be very correlated. It also assumes that the covariance matrix is diagonal.
 
 Naive Bayes does not work well when there is no occurence between a certain class label and a feature, which leads to a likelihood equal to 0 (e.g. if class that comes in testing data has not been seen in training, we will have zero probability of that particular class). 
 
