@@ -219,3 +219,4 @@ Motivate from the following criteria:
 
 In general, Decision Trees have high variance and low bias. Naive Bayes, on the other hand, have high bias and low variance. Naive Bayes will only work if the decision boundary is linear, elliptic, or parabolic. Alternative methods are KNNs. 
 
+High variance classifiers produce differing decision boundaries which are highly dependent on the training data. Low bias classifiers produce decision boundaries which on average are good approximations to the true decision boundary. Ensemble predictions using diverse high-variance, low-bias classifiers reduce the variance of the ensemble classifier.
