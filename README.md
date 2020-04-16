@@ -120,7 +120,7 @@ After boosting, a more complex decision boundary is formed. As seen in the figur
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
-Yes. Boosting can be used to reduce bias and variance, but it can also result in overfitting. The idea is to turn a weak classifier into a strong one. 
+Yes. A diverse and complementary set of high-bias classifiers (low degrees of freedom), with performance better than chance, combined by voting, can produce a classifier with a low bias (high degrees of freedom). Boosting can be used to reduce bias and variance, but it can also result in overfitting. The idea is to turn a weak classifier into a strong one. 
 
 <h2>Assignment 6</h2>
 
