@@ -116,7 +116,7 @@ Boosting involves incrementally building an ensemble by training each new model 
 ![ass2](https://user-images.githubusercontent.com/1690217/78284002-f948fc00-751e-11ea-8f07-01984d4c66a6.png)
 ![ass5](https://user-images.githubusercontent.com/1690217/78816303-d496cd80-79d1-11ea-9ab3-eefbcdc14b48.png)
 
-The decision boundary looks a bit more complex. In particular, it separates a certain area where there were errors in classification without boosting erroneously confused class 1 and 2. The boosting allows the model to focus more on these previously misclassified points.
+After boosting, a more complex decision boundary is formed. As seen in the figures, the decision boundary looks a bit more complex for the boosted example. In particular, it separates a certain area where there were errors in classification without boosting erroneously confused class 1 and 2. The boosting allows the model to focus more on these previously misclassified points.
 
 **(3) Can we make up for not using a more advanced model in the basic classifier (e.g. independent features) by using boosting?**
 
