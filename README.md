@@ -109,7 +109,7 @@ Yes the classification is improved for the both of the data sets. This is becaus
   * NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
   * NAIVE BAYES + ADABOOST: Final mean classification accuracy  80.2 with standard deviation 3.52
 
-Describe how and why boosting improves performance here... 
+Boosting involves incrementally building an ensemble by training each new model instance to emphasize the training instancees that previous models mis-classified. This means that we subsequently give more and more weight to observations that are hard to classify. Combining predictors of several estimators generally gives better results than using a single estimator. 
 
 **(2) Plot the decision boundary of the boosted classifier on iris and compare it with that of the basic. What differences do you notice? Is the boundary of the boosted version more complex?**
 
