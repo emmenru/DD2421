@@ -58,7 +58,7 @@ Naive Bayes does not work well when there is no occurence between a certain clas
 the classification results for this scenario by changing classifier or, alternatively,
 manipulating the data?**
 
-Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a radial boundary would perform better. One could also try transforming the data to see if the categories become more separable. Or, one could use boosting, which implements weights that could adjust the importance of the points that are used to define the decision boundary.
+Classes 0 and 1 are well separated but 1 and 2 are not. Perhaps a SVM with a radial kernel would perform better. One could also try transforming the data to see if the categories become more separable. Or, one could use boosting, which implements weights that could adjust the importance of the points that are used to define the decision boundary.
 
 <h2>Assignment 4-5</h2>
 
@@ -104,7 +104,6 @@ Yes the classification is improved for the both of the data sets. This is becaus
 * IRIS 
   * NAIVE BAYES: Final mean classification accuracy  89 with standard deviation 4.16
   * NAIVE BAYES + ADABOOST: Final mean classification accuracy  94.7 with standard deviation 2.82
-
 
 * VOWEL 
   * NAIVE BAYES: Final mean classification accuracy  64.7 with standard deviation 4.03
